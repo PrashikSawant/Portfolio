@@ -416,7 +416,7 @@
 
         .contact-links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -573,6 +573,82 @@
         text-decoration: none;
         color: #8b5cf6;
     }
+
+
+    /* Footer */
+footer {
+    background: linear-gradient(135deg, #4c1d95, #5b21b6, #6d28d9);
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-email {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer-location {
+    color: #c084fc;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer-separator {
+    width: 8px;
+    height: 8px;
+    background: #8b5cf6;
+    border-radius: 50%;
+}
+
+.footer-copyright {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer-contact {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .footer-separator {
+        display: none;
+    }
+    
+    .footer-email, .footer-location {
+        font-size: 1rem;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -761,7 +837,7 @@ When I’m not diving into data, you’ll find me playing chess or spending qual
             <div class="contact-content fade-in">
                 <p>I'm always interested in discussing new opportunities, data projects, or potential collaborations. Whether you're looking for a data analyst or want to explore insights from your data, I'd love to hear from you!</p>
                 <div class="contact-links">
-                    <a href="mailto:prashiksawant47@gmail.com" class="contact-link">📧 Email Me</a>
+                    <!-- <a href="mailto:prashiksawant47@gmail.com" class="contact-link">📧 Email Me</a> -->
                     <a href="https://www.linkedin.com/in/prashik-sawant-ds/" class="contact-link">💼 LinkedIn</a>
                     <a href="https://github.com/PrashikSawant" class="contact-link">🐙 GitHub</a>
                     <a href="https://www.datascienceportfol.io/prashiksawant47" class="contact-link">🌐 Portfolio</a>
@@ -877,5 +953,18 @@ When I’m not diving into data, you’ll find me playing chess or spending qual
             }, 100);
         }, 1000);
     </script>
+
+    <footer>
+    <div class="footer-content">
+        <div class="footer-contact">
+            <span class="footer-email">prashiksawant47@gmail.com</span>
+            <div class="footer-separator"></div>
+            <span class="footer-location">Pune, IN</span>
+        </div>
+        <div class="footer-copyright">
+            © 2024 Prashik Sawant. All rights reserved.
+        </div>
+    </div>
+</footer>
 </body>
 </html>
